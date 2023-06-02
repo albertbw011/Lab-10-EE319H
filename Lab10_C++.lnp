@@ -1,0 +1,17 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\startup_tm4c123.o"
+".\main.o"
+".\dac.o"
+".\pll.o"
+".\sound.o"
+".\texas.o"
+".\module.o"
+".\random.o"
+".\slidepot.o"
+".\st7735.o"
+".\timer0.o"
+".\timer1.o"
+--strict --scatter ".\Lab10_C++.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Lab10_C++.map" -o .\Lab10_C++.axf
